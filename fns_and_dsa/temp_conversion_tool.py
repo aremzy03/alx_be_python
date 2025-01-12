@@ -8,14 +8,20 @@ def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
-    temp = float(input("Enter the temperature to convert: "))
-    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
-    if unit == "C":
-        fah = convert_to_fahrenheit(temp)
-        print(f"{temp}°C is {fah}°F")
-    elif unit == "F":
-        cel = convert_to_celsius(temp)
-        print(f"{temp}°F is {cel}°C")
+    try:
+        temp = float(input("Enter the temperature to convert: "))
+        unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
+        if unit == "C":
+            fah = convert_to_fahrenheit(temp)
+            print(f"{temp}°C is {fah}°F")
+        elif unit == "F":
+            cel = convert_to_celsius(temp)
+            print(f"{temp}°F is {cel}°C")
+        else:
+            print("Invalid unit. Please select C or F.")
+    except ValueError:
+        print("Invalid temperature. Please enter a numeric value.")
+    
 
 main()
     
