@@ -14,4 +14,4 @@ def calculate_future_date():
     return future
 
 future_date = calculate_future_date()
-print(future_date)
+print(future_date.strftime("%Y-%m-%d %H:%M:%S"))
