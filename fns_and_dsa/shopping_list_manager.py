@@ -6,11 +6,11 @@ def display_menu():
     print("4. Exit")
 
 def add_item(list):
-    item = input("Enter Item you wish to add. ")
+    item = input("Enter the item to add: ")
     list.append(item)
     
 def remove_item(list):
-    item = input("Enter Item you wish to remove. ")
+    item = input("Enter the item to remove: ")
     if item in list:
         list.remove(item)
     else:
